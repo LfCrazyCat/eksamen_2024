@@ -45,7 +45,8 @@ header {
 .search-bar {
   display: flex;
   align-items: center;
-  flex: 1;
+  justify-content: flex-start;
+  width: 100%;
   /*
  
   justify-content: flex-start; 
@@ -115,12 +116,10 @@ header {
 /* Style for navigasjonsmeny */
 nav ul {
   display: flex;
-  align-items: center;
-  justify-content: center; 
-  gap: 15px; 
+  flex-direction: column; /* For å vertikal meny fortsatt på mobile enheter */
+  gap: 10px; 
   list-style: none;
   padding: 0;
-  margin: 0;
   /*
   display: flex;
   align-items: flex-start;
@@ -134,32 +133,50 @@ nav ul {
 }
 
 nav ul li {
+  display: inline-block; /* får da alle nav-elementene oppe */
+  /*
   display: flex;
-  text-align: left;
+  text-align: left; */
 }
 
 nav ul li a {
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+  text-decoration: none;
+  /*
   padding: 5px;
   color: #000;
   font-size: 16px;
-  text-decoration: none;
+  text-decoration: none; */
 }
 
 nav ul li a:hover {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  /*
   background-color: #928d8d; 
-  border-color: #202020;
+  border-color: #202020; 
+  */
 }
 
 
 nav ul li a i { 
+  font-size: 18px;
+  /*
   font-size: 20px; 
   color: #000000;
+  */
 }
 
 nav ul li.logo {
+  flex: 1;
+  text-align: center;
+  /*
   flex: 2; 
   font-size: 1.5em;
-  font-weight: bold;
+  font-weight: bold; */
 }
 
 nav ul li.logo a {
@@ -168,6 +185,37 @@ nav ul li.logo a {
   color: #000; 
   text-align: center;
   display: block; 
+}
+
+/* Desktop layout (min-width: 1024px) */
+@media (min-width: 1024px) {
+  header {
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .search-bar {
+    order: 1; 
+  }
+
+  nav ul {
+    order: 2; 
+    flex: 1; 
+  }
+
+  nav ul li.logo {
+    text-align: center;
+    flex: none; 
+  }
+
+  nav ul li a {
+    font-size: 18px; 
+  }
+
+  .search-bar input {
+    max-width: 400px; 
+  }
 }
 
 /* BREADCRUMPS */
