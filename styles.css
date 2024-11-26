@@ -45,9 +45,9 @@ ul {
 
 /* Style for header */
 header {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   /*
   flex-direction: column;  Default: Kolonne for mobil 
   gap: 10px;
@@ -59,7 +59,6 @@ header {
 .search-bar {
   display: flex;
   align-items: center;
-  width: 100%;
   max-width: 300px;
   /*
  
@@ -124,7 +123,6 @@ header {
 
 .search-bar button i {
   font-size: 16px; 
-  line-height: 1;
 }
 
 
@@ -135,9 +133,6 @@ nav ul {
   justify-content: center;
   /*flex-direction: column;  For å vertikal meny fortsatt på mobile enheter */
   gap: 15px; 
-  list-style: none;
-  padding: 0;
-  margin: 0;
   /*
   display: flex;
   align-items: flex-start;
@@ -160,8 +155,6 @@ nav ul li {
 nav ul li a {
   
   font-size: 16px;
-  color: #000;
-  text-decoration: none;
   /*
   padding: 5px;
   color: #000;
@@ -266,8 +259,8 @@ nav ul li.logo a {
   padding: 10px 20px;
   background-color: #fff;
   color: #000;
-  border: 0px solid #000;
-  border-radius: 0px;
+  text-decoration: none;
+  border-radius: 5px;
   font-weight: bold;
 }
 
@@ -303,15 +296,13 @@ nav ul li.logo a {
 .popular-products .filter-button {
   background-color: transparent;
   padding: 5px 10px;
-  margin: 0px;
   cursor: pointer;
   color: #000;
-  flex: 0;
+  border: 1px solid #000;
 }
 /* Style for knappen for filter på index.html */
 .popular-products .filters {
   display: flex; 
-  flex-wrap: nowrap; 
   gap: 10px; 
   justify-content: center;  
 }
@@ -333,6 +324,11 @@ nav ul li.logo a {
   padding: 10px;
   border-radius: 0px;
   gap: 5px; 
+}
+
+.product-grid, .category-grid {
+  display: grid;
+  gap: 20px;
 }
 
 .product-card {
@@ -384,12 +380,15 @@ nav.filters .filter-button {
   text-align: left;
 }
 
+.product-card, .category-card {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #000;
+}
 
 /* Style for seksjonen for populære kategorier */
 .category-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .category-card {
@@ -408,18 +407,15 @@ nav.filters .filter-button {
 /* Style for seksjonen for anmeldelser  */
 
 .reviews {
-  margin-top: 0px;
+  margin-top: 20px;
 }
 
 .review-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
   border: 1px solid #ecd3d3;
   padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 1px;
 }
 
 .review-card img {
@@ -448,11 +444,11 @@ nav.filters .filter-button {
 /* Style for footer-delen */
 footer {
   background-color: #fff;
+  margin-top: 30px;
 }
 
 .footer-section {
   margin-bottom: 20px;
-  padding: 0 10px;
 }
 
 .footer-section h3 {
@@ -489,7 +485,6 @@ footer {
   /* Reviews */
   .review-card {
     flex-direction: row; 
-    align-items: flex-start;
   }
 
   /* Footer */
