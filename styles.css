@@ -1,5 +1,4 @@
 /* Globalt style for sidene */
-
 html, body {
   overflow-x: hidden; 
   margin: 0;
@@ -36,7 +35,7 @@ ul {
 /* Style for header */
 header {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Default: Kolonne for mobil */
   gap: 10px;
   padding: 10px;
   background-color: #fff;
@@ -46,8 +45,11 @@ header {
 .search-bar {
   display: flex;
   align-items: center;
+  flex: 1;
+  /*
+ 
   justify-content: flex-start; 
-  padding-left: 10px; 
+  padding-left: 10px;  */
 }
 
 .search-bar form {
@@ -56,6 +58,14 @@ header {
 }
 
 .search-bar input {
+  width: 100%;
+  max-width: 300px; 
+  height: 36px;
+  padding: 5px;
+  border: 1px solid #000;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  /*
   width: 200px; 
   height: 36px; 
   padding: 5px; 
@@ -63,24 +73,36 @@ header {
   border-right: none; 
   border-radius: 5px 0 0 5px; 
   box-sizing: border-box; 
-  margin: 0;
+  margin: 0; */
 }
 
 
 .search-bar button {
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*
   width: 36px; 
   height: 36px; 
   background-color: #fff; 
   color: #000; 
-  border: 1px solid #000; /* Standard sort kant */
+  border: 1px solid #000; 
   border-left: 1px solid #000;
-  border-radius: 0 5px 5px 0; /* Gjør høyre kant rund */
+  border-radius: 0 5px 5px 0; 
   display: flex;
-  align-items: center; /* Sentrerer ikonet vertikalt */
+  align-items: center; 
   justify-content: center;
-  margin: 0; /* Fjerner eventuelle marginer */
-  padding: 0; /* Fjerner unødvendig padding */
+  margin: 0; 
+  padding: 0;
   box-sizing: border-box;
+  */
 }
 
 .search-bar button i {
@@ -93,6 +115,14 @@ header {
 /* Style for navigasjonsmeny */
 nav ul {
   display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 15px; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /*
+  display: flex;
   align-items: flex-start;
   flex-direction: column;
   gap: 10px;
@@ -100,7 +130,7 @@ nav ul {
   background-color:#fff;
   border-bottom: 1px solid #fff;
   list-style: none;
-  margin: 0;
+  margin: 0; */
 }
 
 nav ul li {
