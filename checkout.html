@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handlekurv</title>
+  <link rel="stylesheet" href="styles.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- FontAwesome -->
+</head>
+<body>
+  <header>
+    <!-- Søkefelt for nettsiden som skal være øverst på siden-->
+     <section class="search-bar">
+      <h1 class="visually-hidden">Søk</h1> <!-- For å skjule underoverksrift -->
+      <form action="search.html" method="get">
+        <input type="text" name="search" id="search" placeholder="Søk her..." aria-label="Søkefelt for nettsiden">
+        <button type="submit" aria-label="søk">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+     </section>
+    </header>
+
+   <!-- Navigasjons meny-->
+    <!-- Her er ikonene som profil, hjerte og handlevogn lagt til-->
+  <nav>
+    <ul>
+      <li><a href="index.html">Hjem</a></li>
+      <li><a href="index.html#popular-products">Produkter</a></li>
+      <li class="logo"><a href="index.html">Logo</a></li>
+      <li><a href="index.html#popular-categories">Kategorier</a></li>
+      <li><a href="index.html#contact">Kontakt oss</a></li>
+      <li><a href="#profile"><i class="fa-regular fa-user"></i></a></li>
+      <li><a href="#favorite"><i class="fa-regular fa-heart"></i></a></li>
+      <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+    </ul>
+  </nav>
+
+  <!-- Hovedinnholdet på siden er plassert under Main-->
+   <main>
+    <h1>Kasse</h1>
+
+    <!-- Seksjonen for kundens handlekurv -->
+     <section class="shopping-bag">
+      <h2>1. SHOPPINGBAGGEN DIN</h2>
+      <ul>
+
+        <!-- Produkt i handlekurv ett -->
+        <li class="shopping-bag">
+          <a href="product.html">
+          <img src="bilder/dall_e_belte.webp" alt="Produkt i handlekurv ett">
+          <h3>Produkt navn</h3>
+          <p>Kr 1999</p>
+          <p>Farge: beige</p>
+          </a>
+        </li>
+
+        <!-- Produkt i handlekurv to -->
+        <li class="shopping-bag">
+          <a href="product.html">
+          <img src="bilder/dall_e_belte.webp" alt="Produkt i handlekurv to">
+          <h3>Produkt navn</h3>
+          <p>Kr 1999</p>
+          <p>Farge: beige</p>
+          </a>
+        </li>
+
+        <!-- Produkt i handlekurv tre -->
+         <li class="shopping-bag">
+          <a href="product.html">
+          <img src="bilder/dall_e_belte.webp" alt="Produkt i handlekurv tre">
+          <h3>Produkt navn</h3>
+          <p>Kr 1999</p>
+          <p>Farge: beige</p>
+          </a>
+         </li>
+      </ul>
+     </section>
+
+     <!-- Seksjonen for personopplysninger til kunden -->
+      <section class="personal-info">
+        <h2>2. DINE OPPLYSNINGER</h2>
+        <!-- For skjema, som fylles ut av kunden -->
+         <form action="#" method="post">
+          <p>Leveringsadresse</p>
+          <!-- Fornavn -->
+          <label for="first-name">Fornavn*</label>
+          <input type="text" id="first-name" required>
+          <!-- Etternavn -->
+           <label for="last-name">Etternavn*</label>
+           <input type="text" id="last-name" required>
+           <!-- Gateadresse -->
+            <label for="street-address">Gateadresse*</label>
+            <input type="text" id="street-address" required>
+            <!-- Postnummer -->
+             <label for="postal-code">Postnummer*</label>
+             <input type="text" id="postal-code" required>
+             <!-- Postnummer som på bilde, men regner med at det skal være poststed -->
+              <label for="city">Poststed*</label>
+              <input type="text" id="city" required>
+              <!-- Knapp for å lagre -->
+               <button type="submit">Lagre</button>
+               <!-- Knapp for å avbryte seksjonen-->
+                <button type="reset">Avbryt</button>
+              </form>
+      </section>
+
+      <!--Seksjon for levering av bestilling-->
+      <section class="delivery-options">
+        <h2>3. LEVERING</h2>
+        <p>LEVERINGSVALG</p>
+        <!-- "Radio" for å legge til knapper -->
+        <form action="#" method="post">
+          <ul>
+            <li>
+              <label>
+                <!-- Hjemlevering ekspress-->
+                <input type="radio" id="express-home" name="delivery" value="express-home" required>
+                Ekspress hjemlevering
+              </label>
+            </li>
+            <li>
+              <label>
+                <!-- Ekspress pakke til utleveringssted -->
+               <input type="radio" id="express-pickup" name="delivery" value="express-pickup" required>
+               Ekspress utleveringssted
+              </label>
+            </li>
+            <li>
+              <label>
+                <!-- Standard hjemlevering -->
+            <input type="radio" id="standard-home" name="delivery" value="standard-home" required>
+            Standard hjemlevering
+              </label>
+            </li>
+          </ul>
+        </form>
+      </section>
+
+      <!-- Seksjon for betalingsvalg/opplysninger -->
+       <section class="payment">
+        <h2>4. BETALING</h2>
+        <p>BETAL MED KORT</p>
+        <form action="#" method="post">
+          <!-- Kortnummer for kort-->
+          <label for="card-number">Kortnummer</label>
+          <input type="text" id="card-number" name="card-number" required pattern="\d{16}" placeholder="1234 5678 9123 4567">
+          <!-- Utløpsdato for kort-->
+           <label for="expiry-date">Utløpsdato</label>
+           <input type="text" id="expiry-date" name="expiry-date" required placeholder="mm/dd/yyyy" 
+           pattern="(0[1-9]|1[0-2])/([0-2][0-9]|3[0-1])/\d{4}">
+           <!-- CVC kode -->
+            <label for="cvc">CVC/CVV</label>
+            <input type="number" id="cvc" name="cvc" required placeholder="CVC/CVV">
+            
+            <!-- Sum for total beløp med fullfør-knapp  -->
+             <p>Å betale inkl. mva. 1199 kr</p>
+             <button type="submit">Fullfør kjøp</button>
+             <p class="confirmation-text">
+              Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. 
+              Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det 
+            foreligger uriktige eller ufullstendige opplysninger.
+          </p>
+
+          <!-- Samtykke   -->
+          <fieldset class="consent">
+            <legend>Samtykke</legend>
+            <label for="terms">
+              <input type="checkbox" id="terms" name="terms">
+              <span>Ja, jeg godtar vilkårene</span>
+            </label> 
+            <label for="newsletter">
+              <input type="checkbox" id="newsletter" name="newsletter">
+              <span>Ja takk! Send nyhetsbrev til meg.</span>
+            </label>
+          </fieldset>
+          </form>
+       </section>
+
+       <!-- Seksjonskiller-->
+       <hr class="section-divider">
+
+        <!-- Footerseksjoner-->
+       <footer>
+        <!-- Footer-seksjon for logo-delen -->
+        <section class="footer-section">
+          <p class="logo">Logo</p>
+          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
+        </section>
+  
+        <!-- Footer-seksjon for kontakt-delen -->
+        <section id="contact" class="footer-section">
+          <h3>KONTAKT</h3>
+          <ul>
+            <!-- Adresse-delen -->
+            <li>
+              <i class="fa-solid fa-location-dot"></i> <!-- Location ikon fra fontawesome -->
+                <span><strong>Adresse:</strong> B R A Veien 4, 1757 Halden</span>
+            </li>
+            <!-- Telefonnummer delen -->
+             <li>
+              <i class="fa-solid fa-phone"></i> <!-- Telefon ikon fra fontawesome -->
+              <span><strong>Telefon:</strong> +47 69 60 80 00</span>
+             </li>
+             <!-- E-post delen -->
+             <li>
+              <i class="fa-regular fa-envelope"></i> <!-- E-post ikon fra fontawesome -->
+              <span><strong>E-post:</strong> halden@hiof.no</span>
+            </li>
+            <!-- Åpningstider delen -->
+            <li>
+              <i class="fa-solid fa-clock"></i> <!-- Klokke ikon fra fontawesome -->
+              <span><strong>Åpningstider:</strong> Stenger 15:00</span> 
+            </li>
+          </ul>
+         </section>
+  
+         <!-- Footer-seksjon for snarveier -->
+          <section class="footer-section">
+            <h3>SNARVEIER</h3>
+            <nav>
+              <ul class="snarveier-links">
+                <li><a href="#popular-products">Produkter</a></li>
+                <li><a href="#popular-categories">Kategorier</a></li>
+                <li><a href="#contact">Kontakt oss</a></li>
+                <li><a href="tilgjengelig.erk.karakterEpdf.pdf" target="_blank">Tilgjengelighetserklæring</a></li>
+              </ul>
+            </nav>
+          </section>
+  
+          <!-- Footer-seksjon for sosiale medier -->
+           <section class="footer-section">
+            <h3>SOSIALE PLATTFORMER</h3>
+            <ul class="social-media-links">
+              <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li> <!-- instagram-ikon hentet fra fontawesome-->
+              <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li> <!-- facebook-ikon hentet fra fontawesome -->
+              <li><a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li> <!-- Linkedin-ikon hentet fra fontawesome -->
+              <li><a href="https://www.pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a></li> <!-- Pinterest-ikon henetet fra fontawesome -->
+            </ul>
+           </section>
+      </footer>
+  
+    </main>
+  
+  </body>
+  </html>
+
+

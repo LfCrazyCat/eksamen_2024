@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forside</title>
+  <link rel="stylesheet" href="styles.css">  
+   <!-- FontAwesome -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="home-page">
+  <header>
+    <!-- Søkefelt for nettsiden som skal være øverst på siden-->
+     <section class="search-bar">
+      <h1 class="visually-hidden">Søk</h1> <!-- For å skjule underoverksrift -->
+      <form action="search.html" method="get">
+        <input type="text" name="search" id="search" placeholder="Søk her..." aria-label="Søkefelt for nettsiden">
+        <button type="submit" aria-label="søk">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+     </section>
+    </header>
+
+   <!-- Navigasjons meny-->
+    <!-- Her er ikonene som profil, hjerte og handlevogn lagt til-->
+  <nav>
+    <ul>
+      <li><a href="index.html">Hjem</a></li>
+      <li><a href="#popular-products">Produkter</a></li>
+      <li class="logo"><a href="index.html">Logo</a></li>
+      <li><a href="#popular-categories">Kategorier</a></li>
+      <li><a href="#contact">Kontakt oss</a></li>
+      <li><a href="#profile"><i class="fa-regular fa-user"></i></a></li>
+      <li><a href="#favorite"><i class="fa-regular fa-heart"></i></a></li>
+      <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+    </ul>
+  </nav>
+
+    <!-- Breadcrumbs kommer her -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="index.html">Hjem</a>
+      <span aria-hidden="true">></span>
+      <a href="categories.html">Kategorier</a>
+      <span aria-hidden="true">></span>
+      <a href="current-category.html">Produktkategori</a>
+      <span aria-hidden="true">></span>
+      <span class="current" aria-current="page">Produktnavn</span>
+    </nav>
+  <!-- Hovedinnholdet på siden er plassert under Main-->
+  <main>
+
+
+    <!-- Seksjonen som tar for seg den falske slideren -->
+     <!-- Ønsker å gå for en høyere karakterkrav, derfor har jeg satt inn den falske slideren med en gang selv om resultatet vil se noe annerledes ut-->
+     <section class="fake-banner">
+      <h2>Et harum quidem rerum facilis est et expedita distinctio.</h2>
+      <article class="slide">
+        <h3>Nam libero tempore, cum soluta nobis est eligendi optio nihil impedit quo minus id quod maxime placeat facere possimus.</h3>
+        <a href="#more-news" class="banner-link">Få en prøvepakke i dag!</a>
+      </article>
+     </section>
+
+     <!-- Seksjon som tar for seg de mest populære produktene -->
+      <section id="popular-products" class="popular-products">
+        <header>
+          <h2>Våre mest populære produkter:</h2>
+          <p>Oppdag det beste av det beste.</p>
+        </header>
+        <nav class="filters">
+          <button class="filter-button">New products</button>
+          <button class="filter-button">Special price</button>
+          <button class="filter-button">Best sellers</button>
+        </nav>
+
+        <!-- Grid for de seks produkt-kortene som lager en liste av kortene-->
+         <ul class="product-grid">
+          <!-- Produkt nummer ett -->
+          <li class="product-card">
+            <a href="product.html">
+            <img src="bilder/dall_e_genser.webp" alt="Herregenser i grå farge">
+            <h3>Product name</h3>
+            <p>Kr 1999</p>
+          </a>
+          </li>
+
+          <!-- Produkt nummer to-->
+          <li class="product-card">
+            <a href="product.html">
+            <img src="bilder/dall_e_bukse.webp" alt="Herrebukser i grå farge">
+            <h3>Product name</h3>
+            <p>Kr 1999</p>
+          </a>
+          </li>
+
+          <!-- Produkt nummer tre -->
+          <li class="product-card">
+            <a href="product.html">
+            <img src="bilder/dall_e_jakke.webp" alt="Herrejakke i grå og blå farge">
+            <h3>Product name</h3>
+            <p>Kr 1999</p>
+            </a>
+          </li>
+
+          <!-- Produkt nummer fire -->
+          <li class="product-card">
+            <a href="product.html">
+            <img src="bilder/dall_e_skjorte.webp" alt="Blå herreskjorte">
+            <h3>Product name</h3>
+            <p>Kr 1999</p>
+            </a>
+          </li>
+
+          <!-- Produkt nummer fem -->
+          <li class="product-card">
+            <a href="product.html">
+            <img src="bilder/dall_e_dame_stovlett.webp" alt="Dame boots i svart">
+            <h3>Product name</h3>
+            <p>Kr 1999</p>
+            </a>
+          </li>
+
+          <!-- Produkt nummer seks -->
+          <li class="product-card">
+            <a href="product.html">
+            <img src="bilder/dall_e_belte.webp" alt="Herrebelte i brun farge">
+            <h3>Product name</h3>
+            <p>Kr 1999</p>
+            </a>
+          </li>
+
+        </ul>
+      </section>
+
+      <!-- Seksjonen som tar for seg de mest populære kategoriene -->
+       <section id="popular-categories" class="popular-categories">
+
+        <header>
+          <h2>Våre mest populære kategorier</h2>
+          <p>Oppdag det beste av det beste..</p>
+        </header>
+        <!-- Kort for de ulike populære kategoriene -->
+        <ul class="category-grid">
+          <!-- Populær kategori nummer ett-->
+          <li class="category-card">
+            <h3>Category 1</h3>
+            <p>Kategorien handler om dette her</p>
+          </li>
+          <!-- Populær kategori nummer to -->
+           <li class="category-card">
+            <h3>Category 2</h3>
+            <p>Kategorien handler om dette her</p>
+          </li>
+          <!-- Populær kategori nummer tre -->
+          <li class="category-card">
+            <h3>Category 3</h3>
+            <p>Kategorien handler om dette her</p>
+          </li>
+          <!-- Populær kategori nummer fire -->
+          <li class="category-card">
+            <h3>Category 4</h3>
+            <p>Kategorien handler om dette her</p>
+          </li>
+          <!-- Populær kategori nummer fem  -->
+          <li class="category-card">
+            <h3>Category 5</h3>
+            <p>Kategorien handler om dette her</p>
+          </li>
+         </ul>
+       </section>
+
+       <!-- Seksjonen som tar for seg anmeldelser av kunder -->
+        <section class="reviews">
+          <header>
+            <h2>Anmeldelser</h2>
+            <p>Her er kunders anmeldesers</p>
+          </header>
+          <ul class="review-list">
+            <!-- Anmeldelse fra kunde nummer ett -->
+            <li class="review-card">
+              <img src="bilder/dall_e_kundeanmeldelse1.webp" alt="Profilbilde av fornøyd kunde som gir seks stjerner">
+              <h3>Name Lastname</h3>
+              <p>Morbi ut lacinia nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                Aliquam erat volutpat. Nullam id lacus nulla. Nulla gravida dui ut enim pulvinar viverra. 
+                Cras risus eros, sollicitudin et gravida at, lacinia in dui. 
+                Curabitur sollicitudin elit mi, eget porttitor nisl viverra a. 
+                Curabitur bibendum nisi in nulla ultrices, in porta mi lobortis. 
+                Proin malesuada turpis dui, eu dignissim massa dapibus ut. </p>
+            </li>
+
+            <!-- Anmeldelse fra kunde nummer to -->
+            <li class="review-card">
+              <img src="bilder/dall_e_kundeanmeldelse3.webp" alt="Profilbilde av middels fornøyd kunde">
+              <h3>Name Lastname</h3>
+              <p>Morbi ut lacinia nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                Aliquam erat volutpat. Nullam id lacus nulla. Nulla gravida dui ut enim pulvinar viverra. 
+                Cras risus eros, sollicitudin et gravida at, lacinia in dui. 
+                Curabitur sollicitudin elit mi, eget porttitor nisl viverra a. 
+                Curabitur bibendum nisi in nulla ultrices, in porta mi lobortis. 
+                Proin malesuada turpis dui, eu dignissim massa dapibus ut. </p>
+              </li>
+
+              <!-- Anmeldelse fra kunde nummer tre -->
+               <li class="review-card">
+                <img src="bilder/dall_e_kundennmeldelse2.webp" alt="Profilbilde av veldig fornøyd kunde">
+                <h3>Name Lastname</h3>
+                <p>Morbi ut lacinia nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                  Aliquam erat volutpat. Nullam id lacus nulla. Nulla gravida dui ut enim pulvinar viverra. 
+                  Cras risus eros, sollicitudin et gravida at, lacinia in dui. 
+                  Curabitur sollicitudin elit mi, eget porttitor nisl viverra a. 
+                  Curabitur bibendum nisi in nulla ultrices, in porta mi lobortis. 
+                  Proin malesuada turpis dui, eu dignissim massa dapibus ut. </p>
+               </li>
+
+               <!-- Anmeldelse fra kunde nummer fire -->
+                <li class="review-card">
+                <img src="bilder/dall_e_kundeanmeldelse1.webp" alt="Profilbilde av misfornøyd kunde">
+                <h3>Name Lastname</h3>
+                <p>Morbi ut lacinia nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                   Aliquam erat volutpat. Nullam id lacus nulla. Nulla gravida dui ut enim pulvinar viverra. 
+                   Cras risus eros, sollicitudin et gravida at, lacinia in dui. 
+                   Curabitur sollicitudin elit mi, eget porttitor nisl viverra a. 
+                   Curabitur bibendum nisi in nulla ultrices, in porta mi lobortis. 
+                   Proin malesuada turpis dui, eu dignissim massa dapibus ut.</p>
+                </li>
+
+                <!-- Anmeldelse fra kunde nummer fem -->
+                 <li class="review-card">
+                  <img src="bilder/dall_e_kundeanmeldelse3.webp" alt="Profilbilde av kunde som gir fire stjerner">
+                  <h3>Name Lastname</h3>
+                  <p>Morbi ut lacinia nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                    Aliquam erat volutpat. Nullam id lacus nulla. Nulla gravida dui ut enim pulvinar viverra. 
+                    Cras risus eros, sollicitudin et gravida at, lacinia in dui. 
+                    Curabitur sollicitudin elit mi, eget porttitor nisl viverra a. 
+                    Curabitur bibendum nisi in nulla ultrices, in porta mi lobortis. 
+                    Proin malesuada turpis dui, eu dignissim massa dapibus ut.</p>
+                 </li>
+
+                 <!-- Anmeldelse fra kunde nummer seks -->
+                  <li class="review-card">
+                    <img src="bilder/dall_e_kundennmeldelse2.webp" alt="Profilbilde av svært misfornøyd kunde">
+                    <h3>Name Lastname</h3>
+                    <p>Morbi ut lacinia nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                      Aliquam erat volutpat. Nullam id lacus nulla. Nulla gravida dui ut enim pulvinar viverra. 
+                      Cras risus eros, sollicitudin et gravida at, lacinia in dui. 
+                      Curabitur sollicitudin elit mi, eget porttitor nisl viverra a. 
+                      Curabitur bibendum nisi in nulla ultrices, in porta mi lobortis. 
+                      Proin malesuada turpis dui, eu dignissim massa dapibus ut.</p>
+                  </li>
+                </ul>
+              </section>
+
+              <!-- Seksjonskiller -->
+              <hr class="section-divider">
+
+    <footer>
+      <!-- Footer-seksjon for logo-delen -->
+      <section class="footer-section">
+        <h3>Logo</h3>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
+      </section>
+
+      <!-- Footer-seksjon for kontakt-delen -->
+       <section id="contact" class="footer-section">
+        <h3>KONTAKT</h3>
+        <ul>
+          <!-- Adresse-delen -->
+          <li>
+            <i class="fa-solid fa-location-dot"></i> <!-- Location ikon fra fontawesome -->
+              <span><strong>Adresse:</strong> B R A Veien 4, 1757 Halden</span>
+          </li>
+          <!-- Telefonnummer delen -->
+           <li>
+            <i class="fa-solid fa-phone"></i> <!-- Telefon ikon fra fontawesome -->
+            <span><strong>Telefon:</strong> +47 69 60 80 00</span>
+           </li>
+           <!-- E-post delen -->
+           <li>
+            <i class="fa-regular fa-envelope"></i> <!-- E-post ikon fra fontawesome -->
+            <span><strong>E-post:</strong> halden@hiof.no</span>
+          </li>
+          <!-- Åpningstider delen -->
+          <li>
+            <i class="fa-solid fa-clock"></i> <!-- Klokke ikon fra fontawesome -->
+            <span><strong>Åpningstider:</strong> Stenger 15:00</span> 
+          </li>
+        </ul>
+       </section>
+
+       <!-- Footer-seksjon for snarveier -->
+        <section class="footer-section">
+          <h3>SNARVEIER</h3>
+          <nav>
+            <ul class="snarveier-links">
+              <li><a href="#popular-products">Produkter</a></li>
+              <li><a href="#popular-categories">Kategorier</a></li>
+              <li><a href="#contact">Kontakt oss</a></li>
+            </ul>
+          </nav>
+        </section>
+
+        <!-- Footer-seksjon for sosiale medier -->
+         <section class="footer-section">
+          <h3>SOSIALE PLATTFORMER</h3>
+          <ul class="social-media-links">
+            <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li> <!-- instagram-ikon hentet fra fontawesome-->
+            <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li> <!-- facebook-ikon hentet fra fontawesome -->
+            <li><a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li> <!-- Linkedin-ikon hentet fra fontawesome -->
+            <li><a href="https://www.pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a></li> <!-- Pinterest-ikon henetet fra fontawesome -->
+          </ul>
+         </section>
+    </footer>
+
+  </main>
+
+</body>
+</html>

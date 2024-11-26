@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produkt</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Fontawesome -->
+</head>
+<body>
+  <header>
+    <!-- Søkefelt for nettsiden som skal være øverst på siden-->
+     <section class="search-bar">
+      <h1 class="visually-hidden">Søk</h1> <!-- For å skjule underoverksrift -->
+      <form action="search.html" method="get">
+        <input type="text" name="search" id="search" placeholder="Søk her..." aria-label="Søkefelt for nettsiden">
+        <button type="submit" aria-label="søk">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+     </section>
+    </header>
+
+   <!-- Navigasjons meny-->
+    <!-- Her er ikonene som profil, hjerte og handlevogn lagt til fra Fontawesome -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="index.html#popular-products">Produkter</a></li>
+        <li class="logo"><a href="index.html">Logo</a></li>
+        <li><a href="index.html#popular-categories">Kategorier</a></li>
+        <li><a href="index.html#contact">Kontakt oss</a></li>
+        <li><a href="#profile"><i class="fa-regular fa-user"></i></a></li>
+        <li><a href="#favorite"><i class="fa-regular fa-heart"></i></a></li>
+        <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      </ul>
+    </nav>
+
+  <!--Hovedinnholdet på produktsiden -->
+  <main class="product-page">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="index.html">Hjem</a>
+      <i class="fa-solid fa-angle-right"></i>
+      <a href="categories.html">Kategori</a>
+      <i class="fa-solid fa-angle-right"></i>
+      <strong>Produktnavn</strong>
+    </nav>
+
+        <!-- Seksjon for produkt  -->
+  <section class="product-details">
+    <figure class="product-images">
+      <a href="product.html">
+      <img src="bilder/dall_e_multi.webp" alt="hovedbilde av produkt på produktsiden" class="main-image">
+      </a>
+      <figcaption class="thumbnail-images">
+        <a href="product.html"><img src="bilder/dall_e_belte.webp" alt="bilde av produkt på produkt-side"></a>
+        <a href="product.html"><img src="bilder/dall_e_bukse.webp" alt="bilde av produkt på produkt-side"></a>
+        <a href="product.html"><img src="bilder/dall_e_dame_stovlett.webp" alt="bilde av produkt på produkt-side"></a>
+        <a href="product.html"><img src="bilder/dall_e_genser.webp" alt="bilde av produkt på produkt-side"></a>
+      </figcaption>
+    </figure>
+  
+     <!-- Produkktinformasjon -->
+          <article class="product-info">
+          <h1>Produkt navn</h1> <!-- Må settes som H1 om jeg ikke finner noen annen overskrift -->
+          <p><a href="brand.html">Gucci</a></p>
+          <p class="price">5 195 kr inkl. mva.</p>
+          <p>Farge: <span class="bold-text">beige</span></p>
+         </article> 
+        </section>
+
+        <!-- Relaterte/Lignende produkter med aside -->
+         <aside class="related-products">
+          <h2>Lignende produkter</h2>
+          <ul class="product-grid">
+            <!-- Lignende produkt nummer ett-->
+            <li class="product-card">
+              <a href="product.html">
+              <img src="bilder/dall_e_belte.webp" alt="Relatert produkt av brunt belte">
+              <h3>Produkt navn 1</h3>
+              <p class="price">Kr 1999</p>
+              </a>
+           </li>
+
+             <!-- Lignende produkt nummer to -->
+           <li class="product-card">
+            <a href="product.html">
+             <img src="bilder/dall_e_bukse.webp" alt="Relatert produkt av grå herrebukser">
+             <h3>Produkt navn 2</h3>
+             <p class="price">Kr 1999</p>
+            </a>
+          </li>
+
+           <!-- Lignende produkt nummer tre -->
+         <li class="product-card">
+          <a href="product.html">
+          <img src="bilder/dall_e_genser.webp" alt="Relatert produkt av grå herre genser">
+          <h3>Produkt navn 3</h3>
+          <p class="price">Kr 1999</p>
+          </a>
+         </li>
+
+         <!-- Lignende produkt nummer fire -->
+        <li class="product-card">
+          <a href="product.html">
+         <img src="bilder/dall_e_jakke.webp" alt="Relatert produkt av grå herrejakke">
+         <h3>Produkt navn 4</h3>
+         <p class="price">Kr 1999</p>
+          </a>
+        </li>
+
+        <!-- Lignende produkt nummer fem -->
+       <li class="product-card">
+        <a href="product.html">
+        <img src="bilder/dall_e_skjorte.webp" alt="Relatert produkt av blå herreskjorte">
+        <h3>Produkt navn 5</h3>
+        <p class="price">Kr 1999</p>
+        </a>
+       </li>
+
+        <!-- Lignende produkt nummer seks -->
+       <li class="product-card">
+        <a href="product.html">
+        <img src="bilder/dall_e_herrejakkewebp.webp" alt="Relatert produkt av grå herrejakke">
+        <h3>Produkt navn 6</h3>
+        <p class="price">Kr 1999</p>
+        </a>
+       </li>
+      </ul>
+    </aside>
+
+                  <!-- Seksjonskiller -->
+                  <hr class="section-divider">
+
+<footer>
+  <!-- Footer-seksjon for logo-delen -->
+  <section class="footer-section">
+    <p class="logo">Logo</p>
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
+  </section>
+
+  <!-- Footer-seksjon for kontakt-delen -->
+  <section id="contact" class="footer-section">
+    <h3>KONTAKT</h3>
+    <ul>
+      <!-- Adresse-delen -->
+      <li>
+        <i class="fa-solid fa-location-dot"></i> <!-- Location ikon fra fontawesome -->
+          <span><strong>Adresse:</strong> B R A Veien 4, 1757 Halden</span>
+      </li>
+      <!-- Telefonnummer delen -->
+       <li>
+        <i class="fa-solid fa-phone"></i> <!-- Telefon ikon fra fontawesome -->
+        <span><strong>Telefon:</strong> +47 69 60 80 00</span>
+       </li>
+       <!-- E-post delen -->
+       <li>
+        <i class="fa-regular fa-envelope"></i> <!-- E-post ikon fra fontawesome -->
+        <span><strong>E-post:</strong> halden@hiof.no</span>
+      </li>
+      <!-- Åpningstider delen -->
+      <li>
+        <i class="fa-solid fa-clock"></i> <!-- Klokke ikon fra fontawesome -->
+        <span><strong>Åpningstider:</strong> Stenger 15:00</span> 
+      </li>
+    </ul>
+   </section>
+
+   <!-- Footer-seksjon for snarveier -->
+    <section class="footer-section">
+      <h3>SNARVEIER</h3>
+      <nav>
+        <ul class="snarveier-links">
+          <li><a href="#popular-products">Produkter</a></li>
+          <li><a href="#popular-categories">Kategorier</a></li>
+          <li><a href="#contact">Kontakt oss</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Footer-seksjon for sosiale medier -->
+     <section class="footer-section">
+      <h3>SOSIALE PLATTFORMER</h3>
+      <ul class="social-media-links">
+        <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li> <!-- instagram-ikon hentet fra fontawesome-->
+        <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li> <!-- facebook-ikon hentet fra fontawesome -->
+        <li><a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li> <!-- Linkedin-ikon hentet fra fontawesome -->
+        <li><a href="https://www.pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a></li> <!-- Pinterest-ikon henetet fra fontawesome -->
+      </ul>
+     </section>
+</footer>
+         
+  </main>
+
+  
+</body>
+</html>
