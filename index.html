@@ -10,22 +10,18 @@
 </head>
 <body class="home-page">
   <header>
-    <!-- Søkefelt for nettsiden som skal være øverst på siden-->
-     <section class="search-bar">
-      <h1 class="visually-hidden">Søk</h1> <!-- For å skjule underoverksrift -->
-      <form action="search.html" method="get">
-        <input type="text" name="search" id="search" placeholder="Søk her..." aria-label="Søkefelt for nettsiden">
-        <button type="submit" aria-label="søk">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </form>
-     </section>
-    </header>
-
-   <!-- Navigasjons meny-->
+       <!-- Navigasjons meny-->
     <!-- Her er ikonene som profil, hjerte og handlevogn lagt til-->
   <nav>
     <ul>
+      <li class="search-bar">
+        <form action="search.html" method="get">
+          <input type="text" name="search" id="search" placeholder="Søk her..." aria-label="Søkefelt for nettsiden">
+          <button type="submit" aria-label="søk">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </li>
       <li><a href="index.html">Hjem</a></li>
       <li><a href="#popular-products">Produkter</a></li>
       <li class="logo"><a href="index.html">Logo</a></li>
@@ -36,6 +32,8 @@
       <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
     </ul>
   </nav>
+    </header>
+
 
     <!-- Breadcrumbs kommer her -->
     <nav class="breadcrumb" aria-label="breadcrumb">
