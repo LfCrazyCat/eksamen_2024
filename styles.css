@@ -153,17 +153,27 @@ nav ul li.logo a {
   }
     /* Søkefelt desktop */
   .search-bar {
-    order: 1; /* Plasser søkefeltet først */
+    order: 0; /* Plasser søkefeltet først */
     display: flex;
     align-items: center;
-    margin-right: 30px;
+    margin-right: 80px;
   }
 
-  
   .search-bar form {
     display: flex;
     align-items: center;
     max-width: 250px;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
   }
 
   nav ul li {
@@ -181,19 +191,9 @@ nav ul li.logo a {
     height: 40px;
   }
 
-  nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex: 1;
-  }
+
 
   nav ul li.logo {
-    order: 3; /* Plasser logoen i midten */
     flex: 1;
     text-align: center;
   }
@@ -424,7 +424,16 @@ nav.filters .filter-button {
 footer {
   background-color: #fff;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
+
+footer .footer-section {
+  width: 100%;
+  margin-bottom: 20px; 
+}
+
 
 .footer-section {
   margin-bottom: 20px;
@@ -438,6 +447,23 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+/* Større skjermer */
+@media (min-width: 1024px) {
+  footer .footer-section:first-child {
+    margin-bottom: 30px; /* Øk avstanden på større skjermer */
+  }
+
+  footer .footer-section:not(:first-child) {
+    text-align: center;
+    width: calc(33.33% - 20px); /* Tre seksjoner fordelt på full bredde */
+    margin-bottom: 0px;
+  }
+
+  footer .footer-section:not(:last-child) {
+    margin-right: 10px; /* Avstand mellom seksjoner */
+  }
 }
 
 
@@ -466,15 +492,6 @@ footer {
     flex-direction: row; 
   }
 
-  /* Footer */
-  footer {
-    flex-direction: row; 
-    justify-content: space-between;
-  }
-
-  .footer-section ul {
-    flex-direction: row; 
-  }
 }
 
 
