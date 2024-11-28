@@ -1353,16 +1353,18 @@ fieldset.consent label {
   }
 
   .category-card {
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    border-radius: 5px; 
-    color: #fff; 
-    padding: 20px; 
-    display: flex; 
-    flex-direction: column;
-    justify-content: center; 
-    text-align: center;
+    position: relative; /* plassering av tekst */
+    background-size: cover; /* bakgrunnsbildet dekker */
+    background-position: center; /* sentraliser bildet */
+    background-repeat: no-repeat; /* ingen gjentakelse */
+    overflow: hidden; /* Skjule overskytende innhold */
+    color: white; /* Hvit tekst */
+    text-align: center; /* Sentrer tekst horisontalt */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
   }
    
   /* Tre føste kategorikort */
@@ -1376,15 +1378,14 @@ fieldset.consent label {
 
     /* Fjerde kategorikort */
     .category-card:nth-child(4) {
-      max-width: 864px;
-      height: 300px; 
       grid-column: span 2; 
+      height: 300px;
     }
 
       /* Femte kategorikort */
   .category-card:nth-child(5) {
-    max-width: 300px;
-    height: 300px; 
+    grid-column: span 1; 
+    height: 300px;
   }
 
   .category-card img {
@@ -1392,6 +1393,19 @@ fieldset.consent label {
     height: 100%; 
     object-fit: cover; 
   }
+
+    /* Tekst oppå bildene */
+    .category-card::before {
+      content: attr(data-category); 
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); 
+      z-index: 1;
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+    }
 
 
   .review-card {
