@@ -1339,10 +1339,15 @@ fieldset.consent label {
     gap: 20px;  
     justify-content: center;
   }
+
   .product-card {
     max-width: 350px; 
     width: 100%; 
     margin: 0 1rem;
+  }
+
+  .popular-products p {
+    font-size: 16px;
   }
 
   .category-grid {
@@ -1525,9 +1530,36 @@ fieldset.consent label {
 
 
   /* Checkout.html */
-  .shopping-bag {
+  .shopping-bag ul {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
+  .shopping-bag li {
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+  }
+  .shopping-bag img {
+    width: 150px; 
+    height: auto; 
+    border-radius: 8px; 
+    object-fit: cover;
+  }
+  .shopping-bag h3, 
+  .shopping-bag p {
+    margin: 0; 
+  }
+  .shopping-bag a {
+    display: flex;
+    flex-direction: column; 
+    text-align: left; 
+    flex: 1; 
+  }
+
+
+
+
 
 
 
