@@ -1312,11 +1312,8 @@ fieldset.consent label {
   }
 
   .filters {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px; 
-    width: 100%;
+    max-width: 450px;
+    margin: 0 auto 20px;
   }
 
   .filter-button {
