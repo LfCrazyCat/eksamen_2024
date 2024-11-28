@@ -1349,7 +1349,7 @@ fieldset.consent label {
   .category-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 20px;
+    gap: 1px;
   }
 
   .category-card {
@@ -1365,6 +1365,7 @@ fieldset.consent label {
     align-items: center;
     font-size: 18px;
     font-weight: bold;
+    border-color: #fff; /* hvit farge på border */
   }
    
   /* Tre føste kategorikort */
@@ -1406,13 +1407,46 @@ fieldset.consent label {
       font-weight: bold;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
     }
-
+   
+    .review-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* fire kolonner, fire anmeldelse */
+      gap: 20px; /* avstand mellom kortene */
+      justify-content: center; /* sentraliser innholdet */
+      align-items: start; /* justere kortene til toppen */
+    } 
 
   .review-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    max-width: 289px; /* bredde per kort ift. karakterkrav */
+    width: 100%; /* fylle tilgjengelig plass */
+    padding: 15px; /* innvendig padding */
+    border: 1px solid #ddd; /* border rundt kortene */
+    border-radius: 5px; /* runnere border */
+    display: flex;
+    flex-direction: column; /* kolonner satt */
+    align-items: center; /* sentrer horisontalt */
+    text-align: center; /* sentrer teksten */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
+
+  .review-card img {
+    max-width: 100%; /* fyller kortet */
+    height: auto;
+    margin-bottom: 10px; /* avstand mellom bilde og tekst */
+  }
+
+  .review-card h3 {
+    margin: 10px 0; 
+    font-size: 18px; 
+    font-weight: bold;
+  }
+
+  .review-card p {
+    font-size: 14px; /* tekststørrelse */
+    line-height: 1.5; /* linjeavstand for lesbarhet */
+    color: #000; /* tekstfarge */
+  }
+
 
   footer {
     flex-direction: column;
