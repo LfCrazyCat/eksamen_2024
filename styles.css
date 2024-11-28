@@ -1527,6 +1527,11 @@ fieldset.consent label {
   
 
 
+  /* Checkout.html */
+  .shopping-bag {
+    display: flex;
+  }
+
 
 
 
