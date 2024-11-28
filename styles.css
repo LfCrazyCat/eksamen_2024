@@ -1281,6 +1281,9 @@ fieldset.consent label {
   .review-card {
       flex-direction: row;
   }
+  .delivery-time {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1677,7 +1680,39 @@ button[type="reset"] {
   }
   
   
+  /* leveringsvalg */
+  .delivery-options li {
+    border: 4px solid #ddd; 
+    border-radius: 5px; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    background-color: #ffffff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+
   
+  .delivery-options p {
+    color: #555; 
+    font-size: 18px; 
+    margin-bottom: 10px; 
+    font-weight: bold; 
+  }
+
+ 
+  .delivery-options li:hover {
+    background-color: #eaeaea; 
+    border-color: #736e6e; 
+    transition: all 0.3s ease-in-out; 
+  }
+  
+  
+  
+    .delivery-time {
+    display: block;
+    font-size: 14px;
+    color: #000; 
+    margin-top: 5px; 
+  }
   
   
 
