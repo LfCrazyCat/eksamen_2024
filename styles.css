@@ -1590,69 +1590,85 @@ button[type="reset"] {
   justify-self: center;
   background-color: #ccc; /* Beholder stilen */
 }
- /* Personlige opplysninger */
+ 
+
   /* Personlige opplysninger */
 .personal-info form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px 15px;
+  gap: 15px 20px;
+}
+/* fornavn */
+label[for="first-name"] {
+  grid-column: 1; /* 1. kolonne */
+  grid-row: 1; /* 1. rad */
 }
 
-    label[for="first-name"],
-  #first-name {
-    grid-column: 1; /* 1. kolonne */
-  }
-    #first-name {
-    grid-column: 1;
-    grid-row: 2; /* 2. rad */
-  }
-  
-    label[for="last-name"],
-  #last-name {
-    grid-column: 2; /* 2. kolonne */
-  }
-    #last-name {
-    grid-column: 2;
-    grid-row: 2; /* 2. rad */
-  }
+#first-name {
+  grid-column: 1; /* 1. kolonne */
+  grid-row: 2; /* 2. rad */
+}
 
-    label[for="street-address"],
-  #street-address {
-    grid-column: span 2; /* spaner begge kolonner */
-  }
-    #street-address {
-    grid-column: span 2;
-    grid-row: 4; /* 4. rad */
-  }
+/* etternavn */
+label[for="last-name"] {
+  grid-column: 2; /* 2. kolonne */
+  grid-row: 1; /* 1 rad */
+}
 
-    /* Postnummer og Poststed */
-  label[for="postal-code"],
-  #postal-code {
-    grid-column: 1; /* 1. kolonne */
-  }
-    #postal-code {
-    grid-column: 1;
-    grid-row: 6; /* 6. rad */
-  }
+#last-name {
+  grid-column: 2; /* 2. kolonne */
+  grid-row: 2; /* 2 rad */
+}
 
-    label[for="city"],
-  #city {
-    grid-column: 2; /* 2. kolonne */
-  }
-    #city {
-    grid-column: 2;
-    grid-row: 6; /* 6. rad */
-  }
-    /* Knappene */
-  button[type="submit"],
-  button[type="reset"] {
-    grid-column: span 2; /* spaner begge kolonner */
-    justify-self: center; /* Sentrert v grid */
-  }
+/*gateadresse */
+label[for="street-address"] {
+  grid-column: span 2; /* begge kolonner */
+  grid-row: 3; /* 3.rad */
+}
 
-  button[type="submit"] {
-    margin-bottom: 10px; /* avstand avbryt-knapp */
-  }
+#street-address {
+  grid-column: span 2; /* begge kolonner */
+  grid-row: 4; /* 4. rad */
+}
+
+/* Postnummer */
+label[for="postal-code"] {
+  grid-column: 1; /* 1. kolonne */
+  grid-row: 5; /* 5. rad */
+}
+
+#postal-code {
+  grid-column: 1; /* 1. kolonne */
+  grid-row: 6; /* 6 rad */
+}
+
+/* Poststed */
+label[for="city"] {
+  grid-column: 2; /* 2 kolonne */
+  grid-row: 5; /* 5 rad */
+}
+
+#city {
+  grid-column: 2; /* 2 kolonne */
+  grid-row: 6; /* 6 rad */
+}
+
+/* Knappene */
+button[type="submit"],
+button[type="reset"] {
+  grid-column: span 2; /*  begge kolonner */
+  justify-self: center; /* sentrer i grid */
+}
+
+button[type="submit"] {
+  grid-row: 7; /* 7 rad */
+  margin-bottom: 10px; /* rom avbryt-knappen */
+}
+
+button[type="reset"] {
+  grid-row: 8; /* 8 rad */
+}
+
 
 
 
