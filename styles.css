@@ -147,7 +147,7 @@ nav ul li.logo a {
 @media (min-width: 1024px) {
   header {
     display: flex;
-    flex-direction: left;
+    /* flex-direction: left; */ /*OPS DEN MÅ BOPT */
     padding: 20px 40px; /* Juster padding for desktop */
   }
 
@@ -1531,32 +1531,128 @@ fieldset.consent label {
 
   /* Checkout.html */
   .shopping-bag ul {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
+
   .shopping-bag li {
     display: flex; 
     align-items: center; 
-    gap: 20px; 
+    padding: 10px 0;
   }
   .shopping-bag img {
-    width: 150px; 
-    height: auto; 
-    border-radius: 8px; 
+    width: 550px; 
+    height: auto;  
     object-fit: cover;
   }
-  .shopping-bag h3, 
+  .shopping-bag h3 {
+    font-size: 18px;
+    margin: 0 0 5px 0;
+  }
   .shopping-bag p {
+    font-size: 14px;
     margin: 0; 
   }
   .shopping-bag a {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    justify-content: center; 
     text-align: left; 
     flex: 1; 
   }
 
+/* Personlige opplysninger */
+.personal-info form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+#first-name,
+#last-name {
+  grid-column: span 1;
+}
+
+#street-address {
+  grid-column: span 2;
+}
+#postal-code,
+#city {
+  grid-column: span 1;
+}
+button[type="submit"] {
+  grid-column: span 2;
+  justify-self: center; /* Sentraliser teksten */
+}
+button[type="reset"] {
+  grid-column: span 2;
+  justify-self: center;
+  background-color: #ccc; /* Beholder stilen */
+}
+ /* Personlige opplysninger */
+  /* Personlige opplysninger */
+.personal-info form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 15px;
+}
+
+    label[for="first-name"],
+  #first-name {
+    grid-column: 1; /* 1. kolonne */
+  }
+    #first-name {
+    grid-column: 1;
+    grid-row: 2; /* 2. rad */
+  }
+  
+    label[for="last-name"],
+  #last-name {
+    grid-column: 2; /* 2. kolonne */
+  }
+    #last-name {
+    grid-column: 2;
+    grid-row: 2; /* 2. rad */
+  }
+
+    label[for="street-address"],
+  #street-address {
+    grid-column: span 2; /* spaner begge kolonner */
+  }
+    #street-address {
+    grid-column: span 2;
+    grid-row: 4; /* 4. rad */
+  }
+
+    /* Postnummer og Poststed */
+  label[for="postal-code"],
+  #postal-code {
+    grid-column: 1; /* 1. kolonne */
+  }
+    #postal-code {
+    grid-column: 1;
+    grid-row: 6; /* 6. rad */
+  }
+
+    label[for="city"],
+  #city {
+    grid-column: 2; /* 2. kolonne */
+  }
+    #city {
+    grid-column: 2;
+    grid-row: 6; /* 6. rad */
+  }
+    /* Knappene */
+  button[type="submit"],
+  button[type="reset"] {
+    grid-column: span 2; /* spaner begge kolonner */
+    justify-self: center; /* Sentrert v grid */
+  }
+
+  button[type="submit"] {
+    margin-bottom: 10px; /* avstand avbryt-knapp */
+  }
 
 
 
