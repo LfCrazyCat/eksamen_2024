@@ -1456,54 +1456,59 @@ fieldset.consent label {
 
   /* Product.html */
   .product-details {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* PB 2/3 bredde, PI 1/3 bredde */
-    gap: 30px; /* avstanden mellom bilder og info */
-    align-items: start;
+    display: flex; /* horisontal layout */
+    flex-direction: row; /* elementene horisontalt */
+    justify-content: space-between; /* plass hovedbilde og info */
+    align-items: flex-start; /* til toppen */
+    gap: 20px; /* Avstand bildene og info */
+    max-width: 1200px; /* Begrense max bredde */
+    margin: 0 auto; /*  containeren */
   }
   .product-images {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    text-align: center;
+    flex: 1; 
+    max-width: 700px;
   }
+
   .main-image { /* hovedbilde */
-    width: 100%;
-    max-width: 600px; /* Begrensa bredde for hovedbilde */
+    width: calc(160px * 3 + 20px); /* Samme bredde som tre miniatyrbilder pluss gap */
     height: auto;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
   }
       
       .thumbnail-images { /* Miniatyrbilder */
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Fire miniatyrbilder på 1 rad */
-        gap: 10px;
-        justify-content: center;
+        display: flex; /* Sett opp en rad */
+        flex-direction: row; /* Sørg for at bildene er på samme linje */
+        justify-content: center; /* Sentraliser bildene */
+        align-items: center; /* Juster bildene vertikalt */
+        gap: 10px; /* Avstand mellom bildene */
+        margin: 0 auto; /* Sentraliser hele containeren */
+        width: 100%; /* Bruk hele tilgjengelige bredden */
+        max-width: 700px;
       }
+
       .thumbnail-images img {
-        width: 100%;
-        max-width: 80px;
-        height: 80px;
-        object-fit: cover;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 160px; /* Sett maksimal bredde */
+        height: auto; /* Oppretthold bildeforholdet */
+        border: 1px solid #ddd; /* Tynn ramme rundt bildet */
+        border-radius: 5px; /* Myke hjørner */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
       }
+
       .thumbnail-images img:hover {
         transform: scale(1.1);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
         /* Produktinformasjon */
   .product-info {
+    flex: 0 1 440px;
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+
   .product-info h1 {
     font-size: 28px;
     margin-bottom: 15px;
@@ -1535,3 +1540,4 @@ fieldset.consent label {
     font-size: 20px; 
   }
 }
+
