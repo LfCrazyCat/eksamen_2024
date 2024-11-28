@@ -1516,6 +1516,16 @@ fieldset.consent label {
     margin: 20px 0;
   }
 
+  .related-products .product-grid {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* 3 rodukter per rad */
+    gap: 20px; /* mellom produktene */
+    margin: 0 auto; /* sentre grid */
+    padding: 0; /* fjerne padding */
+    list-style: none; /* fjerne punkter fra listen */
+  }
+  
+
 
 
 
