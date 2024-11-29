@@ -1720,9 +1720,76 @@ button[type="reset"] {
       .delivery-time {
       display: block;
       font-size: 14px;
-      color: #777777; 
+      color: #8b8888; 
       margin-top: 5px; 
     }
+
+     /* Style for kortnummer */
+     .payment form {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* To kolonner */
+      grid-template-areas: 
+        "card-number-label card-number-label"
+        "card-number card-number"
+        "expiry-date-label cvc-label"
+        "expiry-date cvc";
+      gap: 10px; 
+      align-items: center;
+    }
+    .payment form label[for="card-number"] {
+      grid-area: card-number-label; 
+    }
+      .payment form input#card-number {
+      grid-area: card-number; 
+    }
+      .payment form label[for="expiry-date"] {
+      grid-area: expiry-date-label; 
+    }
+    
+    .payment form input#expiry-date {
+      grid-area: expiry-date; 
+    }
+      .payment form label[for="cvc"] {
+      grid-area: cvc-label; 
+    }
+      .payment form input#cvc {
+      grid-area: cvc; 
+    }
+
+  /* Fullfør kjøp-knappen */
+  .payment form button {
+    width: 100%; 
+    text-align: center; 
+    font-size: 18px; 
+    font-weight: bold;
+    padding: 20px;
+    grid-column: span 2;
+  }
+
+  /* Justering av teksten for totalpris */
+  .payment p {
+    font-weight: bold;
+    text-align: left; 
+    font-size: 16px; 
+  }
+
+  .payment p.total-price {
+    font-size: 20px; 
+    font-weight: bold; 
+    margin-bottom: 15px; 
+  }
+
+  /* Midtstill teksten under fullfør kjøp-knappen */
+  .payment .confirmation-text {
+    grid-column: span 2;
+    text-align: center; 
+    font-size: 14px; 
+    margin-top: 20px; 
+  }
+
+
+
+
 
 
 
