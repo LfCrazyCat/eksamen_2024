@@ -341,24 +341,24 @@ nav.filters .filter-button {
 
 .product-card a {
   display: flex;
-  flex-direction: column; /* Sett innholdet i kolonne-layout */
-  align-items: flex-start; /* Juster til venstre */
-  text-align: left; /* Sørg for at teksten er venstrestilt */
+  flex-direction: column; 
+  align-items: flex-start; 
+  text-align: left; 
 }
 
 .product-card img {
-  max-width: 100%; /* Bildene fyller kortet */
+  max-width: 100%; 
 }
 
 .product-card h3 {
-  margin: 5px 0; /* Gir litt luft mellom navnet og prisen */
+  margin: 5px 0; /* Gir no luft mellom navnet og prisen */
   font-size: 16px;
   font-weight: bold;
 }
 
 .product-card .price {
-  margin: 0; /* Ingen ekstra margin */
-  font-size: 14px; /* Mindre skrift for pris */
+  margin: 0; /* Ingen extra margin */
+  font-size: 14px; /* Mindre skrift  */
   color: #000;
   text-align: left;
 }
@@ -477,7 +477,7 @@ footer .shortcuts ul li {
 /* Større skjermer */
 @media (min-width: 1024px) {
   footer .footer-section:first-child {
-    margin-bottom: 30px; /* Øk avstanden på større skjermer */
+    margin-bottom: 30px; /* Økt avstand på større skjermer */
   }
 
   footer .footer-section:not(:first-child) {
@@ -494,7 +494,7 @@ footer .shortcuts ul li {
 
 
 
-/* Responsivt design for større skjermer */
+/* Responsivt design for større skjermer over 768px*/
 @media (min-width: 768px) {
 
   nav ul {
@@ -761,18 +761,7 @@ footer .shortcuts ul li {
   text-align: left; 
   width: 100%; 
 }
-  /*
-  display: inline-block;
-  font-size: 18px;
-  font-weight: normal;
-  margin: 0;
-  width: calc(100% - 10px); 
-  text-align: right;
-  
-  width: calc(30%); 
-  text-align: right;
-  display: inline-block; */
-
+ 
 
 .product-card h3 + .price {
   display: inline-block;
@@ -794,7 +783,7 @@ footer .shortcuts ul li {
   justify-content: space-between; 
   align-items: center; 
 } 
-
+/* skjermer som er minst 768px i bredde */
 @media (min-width: 768px) {
   .related-products .product-grid {
     flex-direction: row;
@@ -804,16 +793,6 @@ footer .shortcuts ul li {
     flex: 1 1 calc(33.33% - 20px);
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -972,10 +951,6 @@ button[type="reset"] {
   list-style: none;
   padding: 5px;
   margin: 5px;
- /* display: flex;
-  flex-direction: column; 
-  gap: 10px; */
-  
 }
 
 /* leveringsvalg teksten */
@@ -999,21 +974,14 @@ button[type="reset"] {
   font-size: 16px;
   cursor: pointer;
   white-space: nowrap;
-  /*gap: 10px;
-   width: 100%; */
 }
 
 .delivery-options input[type="radio"] {
   accent-color: black;
   margin: 5px;
-  /*
-  margin-right: 10px; 
-  cursor: pointer;
-  margin: 0;
-  padding: 0; */
-   
 }
 
+/* jeg bør plassere dette innholdet i den andre for mer struktur */
 @media (min-width: 768px) {
   .delivery-options ul {
     flex-direction: row; 
@@ -1185,7 +1153,7 @@ fieldset.consent label {
 
 
 
-/* Mobilvennlig design */
+/* Mobilvennlig design, kan se bortfra */
 @media (max-width: 768px) {
   .payment {
     padding: 15px;
@@ -1225,7 +1193,7 @@ fieldset.consent label {
   white-space: nowrap;
   border: 0;
 }
-
+/* bør plasseres sammen med de andre for mer ryddig struktur */
 @media (min-width: 768px) {
  
   nav ul {
@@ -1261,7 +1229,7 @@ fieldset.consent label {
 }
 
 
-
+/* bør plasseres sammen med de andre for mer ryddig struktur */
 @media (min-width: 768px) {
   .fake-banner {
       text-align: left;
@@ -1286,8 +1254,9 @@ fieldset.consent label {
   }
 }
 
+/* Media quieries, for dekstop-skjermer */
 @media (min-width: 1024px) {
-  /* Global styles for over 1024px */
+  /* Global stile for over 1024px */
   body {
     padding: 0 10px;
     max-width: 1200px;
@@ -1481,29 +1450,30 @@ fieldset.consent label {
     border-radius: 5px;
   }
       
-      .thumbnail-images { /* Miniatyrbilder */
-        display: flex; /* Sett opp en rad */
-        flex-direction: row; /* Sørg for at bildene er på samme linje */
-        justify-content: center; /* Sentraliser bildene */
-        align-items: center; /* Juster bildene vertikalt */
-        gap: 10px; /* Avstand mellom bildene */
-        margin: 0 auto; /* Sentraliser hele containeren */
-        width: 100%; /* Bruk hele tilgjengelige bredden */
-        max-width: 700px;
+  .thumbnail-images { /* Miniatyrbilder */
+    display: flex; /* Sett opp en rad */
+    flex-direction: row; /* Sørg for at bildene er på samme linje */
+    justify-content: center; /* Sentraliser bildene */
+    align-items: center; /* Juster bildene vertikalt */
+    gap: 10px; /* Avstand mellom bildene */
+    margin: 0 auto; /* Sentraliser hele containeren */
+    width: 100%; /* Bruk hele tilgjengelige bredden */
+    max-width: 700px;
+    }
+
+    .thumbnail-images img {
+      max-width: 160px; /* Sett maksimal bredde */
+      height: auto; /* Oppretthold bildeforholdet */
+      border: 1px solid #ddd; /* Tynn ramme rundt bildet */
+      border-radius: 5px; /* Myke hjørner */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; 
       }
 
-      .thumbnail-images img {
-        max-width: 160px; /* Sett maksimal bredde */
-        height: auto; /* Oppretthold bildeforholdet */
-        border: 1px solid #ddd; /* Tynn ramme rundt bildet */
-        border-radius: 5px; /* Myke hjørner */
-        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    .thumbnail-images img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
 
-      .thumbnail-images img:hover {
-        transform: scale(1.1);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
         /* Produktinformasjon */
   .product-info {
     flex: 0 1 440px;
@@ -1534,15 +1504,17 @@ fieldset.consent label {
 
   /* Checkout.html */
   .shopping-bag ul {
-    list-style: none;
+    max-width: 800px; /* Begrens maksimal bredde */
+    margin: 0 auto;
     padding: 0;
-    margin: 0;
   }
 
-  .shopping-bag li {
-    display: flex; 
-    align-items: center; 
-    padding: 10px 0;
+  .shopping-bag li {    
+    display: flex; /* Horisontal layout for bilde og tekst */
+    align-items: flex-start; /* Sentraliser vertikalt */
+    gap: 30px; /* Avstand mellom bilde og tekst */
+    padding: 20px 0; /* Luft mellom hvert produkt */
+    border-bottom: 1px solid #ddd; 
   }
   .shopping-bag img {
     width: 550px; 
@@ -1550,19 +1522,21 @@ fieldset.consent label {
     object-fit: cover;
   }
   .shopping-bag h3 {
-    font-size: 18px;
-    margin: 0 0 5px 0;
+    font-size: 22px; /* Juster skriftstørrelse for produktnavn */
+    font-weight: bold; /* Marker produktnavnet */
+    margin: 0 0 10px; 
   }
   .shopping-bag p {
-    font-size: 14px;
-    margin: 0; 
+    font-size: 18px; 
+    margin: 5px 0;
+
   }
   .shopping-bag a {
     display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    text-align: left; 
-    flex: 1; 
+    flex-direction: column; /* Organiser teksten i kolonner */
+    justify-content: flex-start; /* Sentrer teksten vertikalt */
+    text-align: left;
+    flex: 1;
   }
 
 /* Personlige opplysninger */
@@ -1570,6 +1544,9 @@ fieldset.consent label {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  border-bottom: 1px solid #cdc0c0;
+  margin-bottom: 40px; 
+  padding-bottom: 20px;
 }
 
 #first-name,
@@ -1682,6 +1659,12 @@ button[type="reset"] {
 
 
     /* leveringsvalg */
+    .delivery-options {
+      border-bottom: 1px solid #cdc0c0;
+      margin-bottom: 40px; 
+      padding-bottom: 20px;
+    }
+
     .delivery-options li {
       border: 4px solid #ddd; 
       border-radius: 5px; 
@@ -1809,7 +1792,7 @@ button[type="reset"] {
     color: #000; 
   }
 
-  .consent {
+  .consent { /* Samtykke delen */
       display: flex;
       flex-direction: column; 
       align-items: center; 
@@ -1819,14 +1802,19 @@ button[type="reset"] {
       margin-top: 20px;
       }
 
-      .consent label {
+      .payment fieldset.consent {
         display: flex;
+        flex-direction: column;
         align-items: center; 
-        gap: 10px;
-        font-size: 14px;
-    }
-  
-
+        text-align: center; 
+        margin-top: 50px; 
+        border-bottom: 1px solid #cdc0c0;
+        margin-bottom: 40px; 
+        padding-bottom: 20px;
+      }
+      .payment fieldset.consent label {
+        justify-content: center; 
+      }
 
 
 
@@ -1840,7 +1828,7 @@ button[type="reset"] {
 
   footer {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   footer .footer-section {
