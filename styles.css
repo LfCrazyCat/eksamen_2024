@@ -1786,6 +1786,30 @@ button[type="reset"] {
     font-size: 14px; 
     margin-top: 20px; 
   }
+  .total-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    font-weight: bold; 
+    margin: 40px 0; 
+  }
+  
+  .total-price .price-label {
+    display: block;
+    font-size: 16px; 
+    margin-bottom: 5px; 
+  }
+  
+  .total-price .price-amount {
+    display: block;
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #000; 
+  }
+  
+
 
 
 
