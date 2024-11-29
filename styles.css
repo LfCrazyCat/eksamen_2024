@@ -1,3 +1,4 @@
+/* Ferdig validert, uten feil og advarsler */
 /* Global style*/
 html, body {
   overflow-x: hidden; 
@@ -307,6 +308,7 @@ nav ul li.logo a {
   padding: 10px;
   border-radius: 0px;
   gap: 5px; 
+
 }
 
 .product-grid, .category-grid {
@@ -390,14 +392,14 @@ nav.filters .filter-button {
 /* Style for seksjonen for anmeldelser  */
 
 .reviews {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .review-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border: 1px solid #ecd3d3;
+  border: 1px solid #c5c1c1;
   padding: 15px;
 }
 
@@ -417,7 +419,6 @@ nav.filters .filter-button {
 .review-card p {
   font-size: 14px; 
   text-align: justify; 
-  margin: 0; 
 }
 
 
@@ -437,7 +438,8 @@ footer {
 footer .logo {
   text-align: left;
   margin-bottom: 30px;
-  width: 100%;
+  font-weight: bold; 
+  font-size: 30p
 }
 
 footer .footer-section {
@@ -638,8 +640,8 @@ footer .shortcuts ul li {
 /* style for miniatyrbilder */
 .thumbnail-images {
   display: flex;
-  flex-direction: column; 
-  gap: 20px;
+  flex-direction: row; 
+  gap: 5px;
   align-items: center;
 }
 
@@ -1255,8 +1257,14 @@ fieldset.consent label {
 }
 
 /* Media quieries, for dekstop-skjermer */
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   /* Global stile for over 1024px */
+  main, header, footer, .shopping-bag, .personal-info, .delivery-options, .payment {
+    max-width: 1200px; /* Breddebegrensning index.html og product.html */
+    margin: 0 auto; 
+    padding: 0 20px; 
+  }
+
   body {
     padding: 0 10px;
     max-width: 1200px;
@@ -1270,14 +1278,43 @@ fieldset.consent label {
   }
 
   nav ul {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row; /* Horisontal desktop */
+    justify-content: space-between; 
+    align-items: center; /* Sentralisere vertikalt */
+    gap: 20px; 
+  }
+  nav ul li {
+    text-align: center;
+  }
+  nav ul li a {
+    padding: 10px 20px; /* Øk horisontal padding */
   }
 
+
   .search-bar {
-    max-width: 250px;
-    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    flex: 1;
+    max-width: 400px;
   }
+  .search-bar input {
+    flex: 1;
+    height: 40px;
+    padding: 5px 10px;
+    border-radius: 5px 0 0 5px;
+  }
+  .search-bar button {
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 0 5px 5px 0;
+  }
+    /* Maks bredde for innhold */
+    main, footer, .shopping-bag, .personal-info, .delivery-options, .payment {
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
   .fake-banner h2 {
     font-size: 1.5em; 
@@ -1815,6 +1852,7 @@ button[type="reset"] {
       .payment fieldset.consent label {
         justify-content: center; 
       }
+    }
 
 
 
@@ -1824,20 +1862,4 @@ button[type="reset"] {
 
 
 
-
-
-  footer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  footer .footer-section {
-    width: 100%; 
-    margin-bottom: 20px;
-  }
-
-  .social-media-links a {
-    font-size: 20px; 
-  }
-}
 

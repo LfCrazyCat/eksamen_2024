@@ -1,3 +1,4 @@
+<!-- Ferdig validert, uten feil og advarsler -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,18 +11,22 @@
 </head>
 <body class="home-page">
   <header>
-       <!-- Navigasjons meny-->
-    <!-- Her er ikonene som profil, hjerte og handlevogn lagt til-->
-  <nav>
-    <ul>
-      <li class="search-bar">
+  
+      <section class="search-bar">
+        <h1 class="visually-hidden">Søk</h1> <!-- For å skjule underoverksrift -->
         <form action="search.html" method="get">
           <input type="text" name="search" id="search" placeholder="Søk her..." aria-label="Søkefelt for nettsiden">
           <button type="submit" aria-label="søk">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </form>
-      </li>
+      </section>
+  </header>
+  <!-- Navigasjons meny-->
+    <!-- Her er ikonene som profil, hjerte og handlevogn lagt til fra Fontawesome -->
+
+  <nav>
+    <ul>
       <li><a href="index.html">Hjem</a></li>
       <li><a href="#popular-products">Produkter</a></li>
       <li class="logo"><a href="index.html">Logo</a></li>
@@ -32,10 +37,10 @@
       <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
     </ul>
   </nav>
-    </header>
+   
 
 
-    <!-- Breadcrumbs kommer her -->
+    <!-- Breadcrumbs kommer her --> <!-- Disse er ikke synlig på denne side -->
     <nav class="breadcrumb" aria-label="breadcrumb">
       <a href="index.html">Hjem</a>
       <span aria-hidden="true">></span>
@@ -134,6 +139,7 @@
 
         <header>
           <h2>Våre mest populære kategorier</h2>
+          
         
         </header>
         <!-- Kort for de ulike populære kategoriene -->
@@ -250,7 +256,7 @@
       </section>
 
       <!-- Footer-seksjon for kontakt-delen -->
-       <section class="footer-section contact">
+       <section id="contact" class="footer-section contact">
         <h3>KONTAKT</h3>
         <ul>
           <!-- Adresse-delen -->
